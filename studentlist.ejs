@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Students List</h3>
+
+
+
+    <table width="100%" border="1px" style='text-align:center;'>
+        <tr>
+            <th>Roll Number</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Age</th>
+            <th>Number</th>
+            <th>Actions</th>
+        </tr>
+
+        <%  for(let i=0 ; i<students.length; i++){  %>
+
+            <tr>
+                <td><%- students[i].Id %></td>
+                <td><%- students[i].name %></td>
+                <td><%- students[i].class %></td>
+                <td><%- students[i].age %></td>
+                <td><%- students[i].number %></td>
+                <td>
+                    <a href="/delete-student?id=<%- students[i].Id %>">Delete</a>
+                    &nbsp;&nbsp;
+                    <a href="/upgrate-student?id=<%- students[i].Id %>">Upgrate</a>
+                </td>
+            </tr>
+
+            <% } %>
+
+    </table>
+    <center>
+        <a href="/">
+            Add New Data
+        </a>
+    </center>
+</body>
+
+</html>
